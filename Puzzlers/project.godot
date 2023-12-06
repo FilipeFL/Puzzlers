@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="LadyNight"
+config/name="Puzzlers"
+run/main_scene="res://Scenes/Main.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
