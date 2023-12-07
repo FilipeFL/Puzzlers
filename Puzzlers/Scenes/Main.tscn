@@ -7,6 +7,11 @@
 [node name="GameController" type="Node2D"]
 script = ExtResource("1_tquaq")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1151.0
+offset_bottom = 528.0
+color = Color(0.670588, 0.670588, 0.670588, 1)
+
 [node name="Player" parent="." instance=ExtResource("2_kmidn")]
 
 [node name="Enemy" parent="." instance=ExtResource("3_3wq7v")]
