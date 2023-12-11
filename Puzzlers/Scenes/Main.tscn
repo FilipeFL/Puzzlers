@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/GameController.gd" id="1_tquaq"]
 [ext_resource type="PackedScene" uid="uid://dglugsccprlhu" path="res://Scenes/Player.tscn" id="2_kmidn"]
-[ext_resource type="PackedScene" uid="uid://blw0trr8n48nr" path="res://Scenes/Enemy.tscn" id="3_3wq7v"]
+[ext_resource type="Script" path="res://Scripts/EnemySpawn.gd" id="3_g3b33"]
 
 [node name="GameController" type="Node2D"]
 script = ExtResource("1_tquaq")
@@ -14,5 +14,5 @@ color = Color(0.670588, 0.670588, 0.670588, 1)
 
 [node name="Player" parent="." instance=ExtResource("2_kmidn")]
 
-[node name="Enemy" parent="." instance=ExtResource("3_3wq7v")]
-position = Vector2(200, 200)
+[node name="EnemySpawn" type="Node2D" parent="."]
+script = ExtResource("3_g3b33")

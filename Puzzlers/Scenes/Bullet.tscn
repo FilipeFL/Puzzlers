@@ -16,3 +16,9 @@ position = Vector2(-60, -60)
 target_position = Vector2(120, 120)
 collide_with_areas = true
 collide_with_bodies = false
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-5.72205e-06, -1.90735e-06)
+scale = Vector2(6, 6)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_screen_exited"]
