@@ -1,5 +1,13 @@
 extends Node2D
 
+var health_status = [
+	"TOTAL FAILURE",
+	"SEVERE DAMAGE",
+	"REGULAR DAMAGE",
+	"LIGHTLY DAMAGED",
+	"FULL HEALTH"
+]
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

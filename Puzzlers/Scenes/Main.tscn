@@ -16,3 +16,17 @@ color = Color(0.670588, 0.670588, 0.670588, 1)
 
 [node name="EnemySpawn" type="Node2D" parent="."]
 script = ExtResource("3_g3b33")
+
+[node name="Timer" type="Timer" parent="EnemySpawn"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1151.0
+offset_bottom = 527.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "FULL HEALTH"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="EnemySpawn/Timer" to="EnemySpawn" method="_on_timer_timeout"]
