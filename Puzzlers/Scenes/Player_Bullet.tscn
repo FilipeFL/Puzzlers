@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://ro1l07ml8wnx"]
+
+[ext_resource type="Script" path="res://Scripts/Player_Bullet.gd" id="1_2ivuw"]
+[ext_resource type="Texture2D" uid="uid://dcigu4te3d0g7" path="res://icon.svg" id="2_xvalw"]
+
+[node name="Player_Bullet" type="Node2D"]
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_2ivuw")
+bullet_speed = 400
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.745098, 0.894118, 1, 1)
+texture = ExtResource("2_xvalw")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-60, -60)
+target_position = Vector2(120, 120)
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-5.72205e-06, -1.90735e-06)
+scale = Vector2(6, 6)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_screen_exited"]
