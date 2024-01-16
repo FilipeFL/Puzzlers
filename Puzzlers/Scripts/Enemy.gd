@@ -14,7 +14,6 @@ func _ready():
 	
 	var _target = Vector2(position.x, 100)
 	
-	# TODO: Try to understand how to use Tweening in Godot 4.0
 	tween = get_tree().create_tween()
 	
 	tween.tween_property(self, "position", _target, 2.0).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
@@ -22,7 +21,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	## NOTE: Rotation may vary with the level development
 	rotate(1 * delta)
 	position.y += 50 * delta
 	
